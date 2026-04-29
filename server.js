@@ -7,7 +7,7 @@ const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch
 const app = express();
 
 // Serve static files
-app.use(express.static('.'));
+
 app.use(express.static('public'));
 
 // Enable CORS
