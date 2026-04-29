@@ -1,0 +1,8 @@
+[dotenv@17.3.1] injecting env (1) from .env -- tip: ⚙️  override existing env vars with { override: true }
+ENV LOADED. API_KEY length: 32
+Server ready: http://localhost:3000
+Health: http://localhost:3000/api/health
+FETCHING for London API_KEY len: 32
+Weather URL: https://api.openweathermap.org/data/2.5/weather?q=London&appid=cf7227349698f7d54...
+FETCHING for New Delhi API_KEY len: 32
+Weather URL: https://api.openweathermap.org/data/2.5/weather?q=New%20Delhi&appid=cf7227349698...
