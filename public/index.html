@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Atmospheric Intelligence</p>
+                <h1>Live Weather Dashboard</h1>
+                <p class="hero-text">Track current conditions and a five-day outlook with a calmer, executive-style
+                    weather interface.</p>
+            </div>
+            <div class="hero-badge">
+                <span class="badge-label">Live Updates</span>
+                <span class="badge-value">Current + Forecast</span>
+            </div>
+        </header>
+
+        <main class="dashboard-layout">
+            <aside class="sidebar panel">
+                <section id="search-section" class="sidebar-section">
+                    <div class="section-heading">
+                        <p class="section-kicker">Lookup</p>
+                        <h2>Search a City</h2>
+                    </div>
+                    <form id="search-form" class="search-form">
+                        <label class="sr-only" for="search-input">Search for a city</label>
+                        <input type="text" id="search-input" placeholder="Enter a city name" />
+                        <button type="submit">Search Weather</button>
+                        <button type="button" id="current-location-btn">Use Current Location</button>
+                    </form>
+                </section>
+
+                <section id="history-section" class="sidebar-section">
+                    <div class="section-heading">
+                        <p class="section-kicker">Recent</p>
+                        <h2>Search History</h2>
+                    </div>
+                    <div id="history-container"></div>
+                </section>
+            </aside>
+
+            <div class="weather-display">
+                <div class="status-stack">
+                    <div id="loader" class="loader hidden ">Loading...</div>
+                    <div id="error-container" class="error-message hidden" aria-live="polite"></div>
+                </div>
+
+                <section id="current-weather" class="current-weather-section panel">
+                    <div class="section-heading current-heading">
+                        <div>
+                            <p class="section-kicker">Current Conditions</p>
+                            <h2 id="city-name-date">City Name (Date)</h2>
+                        </div>
+                        <p class="current-summary">Clear visibility into today's conditions and the near-term trend.</p>
+                    </div>
+
+                    <div class="weather-data">
+                        <article class="metric-card">
+                            <p class="metric-label">Temperature</p>
+                            <p id="temperature" class="metric-value">--</p>
+                        </article>
+                        <article class="metric-card">
+                            <p class="metric-label">Humidity</p>
+                            <p id="humidity" class="metric-value">--</p>
+                        </article>
+                        <article class="metric-card">
+                            <p class="metric-label">Wind Speed</p>
+                            <p id="wind-speed" class="metric-value">--</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="forecast" class="forecast-section panel">
+                    <div class="section-heading">
+                        <p class="section-kicker">Outlook</p>
+                        <h2>5-Day Forecast</h2>
+                    </div>
+                    <div id="forecast-container" class="forecast-cards-container">
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
