@@ -17,7 +17,7 @@ app.listen(port, () => {
 
 
 // --- 1. IMPORT DEPENDENCIES ---
-require('dotenv').config({ path: '.env' });
+require('dotenv').config();
 const express = require('express');
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
